@@ -48,7 +48,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       value={{
         user, token, loading,
         login: (email, password) => handle("/api/auth/login", { email, password }),
-        register: (name, email, password) => handle("/api/auth/register", { name, email, password }),
+        register: (name, email, password, role) => handle("/api/auth/register", { name, email, password, role }),
         logout: () => { localStorage.removeItem(KEY); setToken(null); setUser(null); },
       }}
     >
