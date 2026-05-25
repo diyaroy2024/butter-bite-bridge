@@ -1,10 +1,13 @@
 // In-memory data store for demo purposes.
 // NOTE: data resets on server cold start. Real apps would use a database.
 
+export type Role = "donor" | "ngo";
+
 export type User = {
   id: string;
   email: string;
   name: string;
+  role: Role;
   passwordHash: string;
   createdAt: string;
 };
