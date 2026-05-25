@@ -1,12 +1,13 @@
 import { createContext, useContext, useEffect, useState, ReactNode, useCallback } from "react";
 
-type User = { id: string; email: string; name: string };
+type Role = "donor" | "ngo";
+type User = { id: string; email: string; name: string; role: Role };
 type AuthCtx = {
   user: User | null;
   token: string | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (name: string, email: string, password: string) => Promise<void>;
+  register: (name: string, email: string, password: string, role: Role) => Promise<void>;
   logout: () => void;
 };
 
