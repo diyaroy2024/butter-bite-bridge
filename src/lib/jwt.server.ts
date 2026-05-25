@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 const SECRET = process.env.JWT_SECRET || "butter-yellow-dev-secret-change-me";
 
-export type JwtPayload = { sub: string; email: string; name: string };
+export type JwtPayload = { sub: string; email: string; name: string; role: "donor" | "ngo" };
 
 export function signToken(payload: JwtPayload): string {
   return jwt.sign(payload, SECRET, { expiresIn: "7d" });
