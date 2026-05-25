@@ -78,10 +78,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Donate surplus food, claim what's nearby. Secured by REST APIs and JWT." },
       { name: "author", content: "ButterShare" },
       { property: "og:title", content: "ButterShare — Food Donation Network" },
-      { property: "og:description", content: "Donate surplus food, claim what's nearby." },
+      { property: "og:description", content: "Donate surplus food, claim what's nearby. Secured by REST APIs and JWT." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
 
+      { name: "twitter:title", content: "ButterShare — Food Donation Network" },
+      { name: "twitter:description", content: "Donate surplus food, claim what's nearby. Secured by REST APIs and JWT." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6c9ca547-f270-4655-ab94-47f3788e0d92/id-preview-eaf0c25a--e3eae3d9-2aa4-4805-bd08-9cd1438137c3.lovable.app-1779685602542.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6c9ca547-f270-4655-ab94-47f3788e0d92/id-preview-eaf0c25a--e3eae3d9-2aa4-4805-bd08-9cd1438137c3.lovable.app-1779685602542.png" },
     ],
     links: [
       {
